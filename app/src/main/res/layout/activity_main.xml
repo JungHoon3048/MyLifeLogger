@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.park.updown.MainActivity">
+
+    <Button
+        android:text="Smaller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:id="@+id/Smaller"
+        android:layout_alignBaseline="@+id/Bigger"
+        android:layout_alignBottom="@+id/Bigger"
+        android:layout_toRightOf="@+id/Bigger"
+        android:layout_toEndOf="@+id/Bigger" />
+
+    <Button
+        android:text="Bingo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Bingo"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_alignBaseline="@+id/Smaller"
+        android:layout_alignBottom="@+id/Smaller"
+        android:layout_toRightOf="@+id/Smaller"
+        android:layout_toEndOf="@+id/Smaller" />
+
+    <Button
+        android:text="Bigger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="139dp"
+        android:id="@+id/Bigger"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Count"
+        android:layout_above="@+id/Bigger"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="76dp"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="SetNumber(1~500)"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/setNumber"
+        android:layout_toLeftOf="@+id/Bingo"
+        android:layout_toStartOf="@+id/Bingo" />
+
+    <Button
+        android:text="set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/setNumber"
+        android:layout_toRightOf="@+id/setNumber"
+        android:layout_toEndOf="@+id/setNumber"
+        android:id="@+id/set" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setView"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:layout_below="@+id/set"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I think the Number is..."
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:id="@+id/RandomNumber"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/Count"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Smaller"
+        android:layout_toLeftOf="@+id/Bingo"
+        android:layout_toStartOf="@+id/Bingo"
+        android:layout_marginTop="32dp"
+        android:id="@+id/Reset" />
+
+</RelativeLayout>
