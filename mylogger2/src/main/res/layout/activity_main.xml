@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.mylogger2.Main">
+
+    <Button
+        android:text="위치"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:id="@+id/Location"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="데이터베이스"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ShowDB1"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/Location"
+        android:layout_alignLeft="@+id/Location"
+        android:layout_alignStart="@+id/Location" />
+
+    <Button
+        android:text="통계"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Statistic"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/ShowDB1"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
