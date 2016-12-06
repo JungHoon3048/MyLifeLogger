@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MyLogger2</string>
     <string name="title_activity_map">Map</string>
+    <string name="title_activity_pedometer1">Pedometer</string>
+    <string name="title_activity_memo">Memo</string>
 </resources>

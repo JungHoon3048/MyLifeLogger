@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/../mylocation/mylocation.iml" filepath="$PROJECT_DIR$/../mylocation/mylocation.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mylogger/mylogger.iml" filepath="$PROJECT_DIR$/../mylogger/mylogger.iml" />
       <module fileurl="file://$PROJECT_DIR$/mylogger2.iml" filepath="$PROJECT_DIR$/mylogger2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mypedometer/mypedometer.iml" filepath="$PROJECT_DIR$/mypedometer/mypedometer.iml" />
       <module fileurl="file://$PROJECT_DIR$/../phonenumber/phonenumber.iml" filepath="$PROJECT_DIR$/../phonenumber/phonenumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/../quickcoding01/quickcoding01.iml" filepath="$PROJECT_DIR$/../quickcoding01/quickcoding01.iml" />
     </modules>

@@ -7,5 +7,6 @@
         <item >학교</item>
         <item >공부</item>
         <item >휴식</item>
+        <item >(이벤트)</item>
     </string-array>
 </resources>

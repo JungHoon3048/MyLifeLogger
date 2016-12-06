@@ -17,17 +17,17 @@ public class DataBase extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE MyLogger2 (_id INTEGER PRIMARY KEY AUTOINCREMENT, position TEXT, content TEXT,latitude DOUBLE,longitude DOUBLE,pNumber INTEGER);");
+        db.execSQL("CREATE TABLE MyLogger2 (_id INTEGER PRIMARY KEY AUTOINCREMENT,position TEXT,content TEXT,latitude DOUBLE,longitude DOUBLE,pNumber INTEGER,walk INTEGER);");
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
-    public void insert(String position, String content,double latitude,double longitude,int pNumber) {
+    public void insert(String position, String content,double latitude,double longitude,int pNumber,int walk) {
 
         SQLiteDatabase db = getWritableDatabase();
-        String s="INSERT INTO MyLogger2 VALUES(null, '" + position + "','" + content + "','" + latitude + "','" + longitude + "','" + pNumber + "');";
+        String s="INSERT INTO MyLogger2 VALUES(null, '" + position + "','" + content + "','" + latitude + "','" + longitude + "','" + pNumber + "','" + walk + "');";
         db.execSQL(s);
         db.close();
     }
@@ -50,6 +50,8 @@ public class DataBase extends SQLiteOpenHelper {
                     + cursor.getDouble(4)
                     + " | "
                     + cursor.getInt(5)
+                    + " | "
+                    + cursor.getInt(6)
                     + "\n";
         }
 

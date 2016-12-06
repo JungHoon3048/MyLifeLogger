@@ -11,7 +11,7 @@
     tools:context="com.example.mylogger2.ShowDB">
 
     <TextView
-        android:text="텍스트 보기"
+        android:text="textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -23,7 +23,7 @@
         android:id="@+id/showDB" />
 
     <Button
-        android:text="메인"
+        android:text="main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -33,7 +33,7 @@
         android:id="@+id/Main" />
 
     <TextView
-        android:text="저장된DB"
+        android:text="savedDB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"

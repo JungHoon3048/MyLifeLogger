@@ -7,14 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/.." />
-            <option value="$PROJECT_DIR$/../app" />
-            <option value="$PROJECT_DIR$/../generic" />
-            <option value="$PROJECT_DIR$/../mylocation" />
-            <option value="$PROJECT_DIR$/../mylogger" />
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/../phonenumber" />
-            <option value="$PROJECT_DIR$/../quickcoding01" />
+            <option value="$PROJECT_DIR$/mypedometer" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
