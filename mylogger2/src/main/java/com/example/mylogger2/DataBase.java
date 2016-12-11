@@ -49,9 +49,8 @@ public class DataBase extends SQLiteOpenHelper {
                     + " | "
                     + cursor.getDouble(4)
                     + " | "
-                    + cursor.getInt(5)
-                    + " | "
                     + cursor.getInt(6)
+                    + "\n"
                     + "\n";
         }
 

@@ -47,8 +47,9 @@ public class Statistics extends AppCompatActivity {
                 purpose3++;
             } else if (position == 4) {
                 purpose4++;
-            } else
+            } else if (position == 5) {
                 purpose5++;
+            }
         }
 
         ArrayList<BarEntry> entries = new ArrayList<>();

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -18,6 +19,9 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
     private GoogleMap mMap;
     double latitude;
     double longitude;
+//    private PolylineOptions polylineOptions;
+//    private ArrayList<LatLng> arrayPoints;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,9 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
         latitude = intent.getExtras().getDouble("latitude");
         longitude = intent.getExtras().getDouble("longitude");
 
+//        mMap.setOnMapLongClickListener(this);
+//        mMap.setOnMapClickListener(this);
+
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -37,10 +44,13 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
+        MapsInitializer.initialize(getApplicationContext());
+
         mMap = googleMap;
 
+
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(
-                new LatLng(latitude, longitude)   // 위도, 경도
+                new LatLng(latitude, longitude)
         ));
 
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(15);
@@ -61,6 +71,27 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
                 return false;
             }
         });
-
     }
+
+//    @Override
+//    public void onMapLongClick(LatLng latLng) {
+//        mMap.clear();
+//        arrayPoints.clear();
+//    }
+//
+//    @Override
+//    public void onMapClick(LatLng latLng) {
+//
+//        MarkerOptions marker = new MarkerOptions();
+//        marker.position(latLng);
+//        mMap.addMarker(marker);
+//
+//        //맵셋팅
+//        polylineOptions = new PolylineOptions();
+//        polylineOptions.color(Color.RED);
+//        polylineOptions.width(5);
+//        arrayPoints.add(latLng);
+//        polylineOptions.addAll(arrayPoints);
+//        mMap.addPolyline(polylineOptions);
+//    }
 }

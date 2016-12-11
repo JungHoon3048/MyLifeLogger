@@ -21,7 +21,6 @@ public class Main extends AppCompatActivity {
         Button Location = (Button) findViewById(R.id.Location);
         Button ShowDB1 = (Button) findViewById(R.id.ShowDB1);
         final Button Statistic = (Button) findViewById(R.id.Statistic);
-        Button Pedometer = (Button) findViewById(R.id.Pedometer);
 
         final MyLocationListener ml = new MyLocationListener();
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -55,13 +54,6 @@ public class Main extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(getApplicationContext(), Statistics.class);
                 startActivity(intent1);
-            }
-        });
-
-        Pedometer.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Pedometer.class);
-                startActivity(intent);
             }
         });
     }

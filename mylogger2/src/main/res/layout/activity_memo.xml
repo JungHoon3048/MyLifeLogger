@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="16sp"
-        android:text="You Walked 0 Steps!!!"
+        android:text="걸음 수 : 0"
         android:id="@+id/Steps"
         android:layout_alignBaseline="@+id/button_Reset"
         android:layout_alignBottom="@+id/button_Reset"
@@ -78,7 +78,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="reset steps"
+        android:text="걸음 수 리셋"
         android:id="@+id/button_Reset"
         android:onClick="onClick_Reset"
         android:layout_alignParentBottom="true"

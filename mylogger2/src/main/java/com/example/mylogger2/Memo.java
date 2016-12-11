@@ -2,13 +2,18 @@ package com.example.mylogger2;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.hardware.Camera;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -16,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Memo extends AppCompatActivity implements SensorEventListener {
 
@@ -117,7 +123,7 @@ public class Memo extends AppCompatActivity implements SensorEventListener {
         textView = (TextView) findViewById(R.id.Steps);
         buttonReset = (Button) findViewById(R.id.button_Reset);
 
-        textView.setText("You Walked " + walk + " Steps!!!");
+        textView.setText("걸음 수 : " + walk);
     }
 
     // 만보계 기능
@@ -148,7 +154,7 @@ public class Memo extends AppCompatActivity implements SensorEventListener {
                 speed = Math.abs(x + y + z - lastX - lastY - lastZ) / gabOfTime * 10000;
 
                 if (speed > 800) {
-                    textView.setText("You Walked " + (++walk) + " Steps!!!");
+                    textView.setText("걸음 수 : " + (++walk));
                 }
 
                 lastX = event.values[SensorManager.DATA_X];
@@ -164,7 +170,7 @@ public class Memo extends AppCompatActivity implements SensorEventListener {
 
     public void onClick_Reset (View v) {
         walk = 0;
-        textView.setText("You Walked " + walk + " Steps!!!");
+        textView.setText("걸음 수 : " + walk);
     }
 
     // 카메라 기능
@@ -187,8 +193,19 @@ public class Memo extends AppCompatActivity implements SensorEventListener {
         iv.setImageURI(data.getData());
     }
 
-
-
+   public void onPictureTaken(byte[] data, Camera camera) {
+       try {
+           Bitmap bitmap = BitmapFactory.decodeByteArray(data,0,data.length);
+           String imagesaveUri = MediaStore.Images.Media.insertImage(getContentResolver(),bitmap,"사진 저장","저장되었습니다");
+           Uri uri = Uri.parse(imagesaveUri);
+           sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,uri));
+           Toast.makeText(getApplicationContext(),"찍은 사진이 저장되었습니다",Toast.LENGTH_SHORT).show();
+           camera.startPreview();
+       } catch(Exception e)
+       {
+           Log.e("사진 저장", "저장 실패",e);
+       }
+   }
 }
 
 class Position{

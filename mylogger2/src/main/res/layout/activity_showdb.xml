@@ -11,28 +11,6 @@
     tools:context="com.example.mylogger2.ShowDB">
 
     <TextView
-        android:text="textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="22dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="100dp"
-        android:id="@+id/showDB" />
-
-    <Button
-        android:text="main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/showDB"
-        android:layout_alignStart="@+id/showDB"
-        android:layout_marginBottom="90dp"
-        android:id="@+id/Main" />
-
-    <TextView
         android:text="savedDB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,4 +20,21 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="12dp" />
+
+    <Button
+        android:text="main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Main"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/showDB"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
